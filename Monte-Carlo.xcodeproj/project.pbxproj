@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB5C3550298DA330008CE384 /* Monte_CarloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5C354F298DA330008CE384 /* Monte_CarloApp.swift */; };
+		AB5C3552298DA330008CE384 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5C3551298DA330008CE384 /* ContentView.swift */; };
+		AB5C3554298DA331008CE384 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5C3553298DA331008CE384 /* Assets.xcassets */; };
+		AB5C3558298DA331008CE384 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5C3557298DA331008CE384 /* Preview Assets.xcassets */; };
+		AB5C3562298DA331008CE384 /* Monte_CarloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5C3561298DA331008CE384 /* Monte_CarloTests.swift */; };
+		AB5C356C298DA331008CE384 /* Monte_CarloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5C356B298DA331008CE384 /* Monte_CarloUITests.swift */; };
+		AB5C356E298DA331008CE384 /* Monte_CarloUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5C356D298DA331008CE384 /* Monte_CarloUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB5C355E298DA331008CE384 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB5C3544298DA330008CE384 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB5C354B298DA330008CE384;
+			remoteInfo = "Monte-Carlo";
+		};
+		AB5C3568298DA331008CE384 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB5C3544298DA330008CE384 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB5C354B298DA330008CE384;
+			remoteInfo = "Monte-Carlo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AB5C354C298DA330008CE384 /* Monte-Carlo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monte-Carlo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB5C354F298DA330008CE384 /* Monte_CarloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monte_CarloApp.swift; sourceTree = "<group>"; };
+		AB5C3551298DA330008CE384 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AB5C3553298DA331008CE384 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB5C3555298DA331008CE384 /* Monte_Carlo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Monte_Carlo.entitlements; sourceTree = "<group>"; };
+		AB5C3557298DA331008CE384 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AB5C355D298DA331008CE384 /* Monte-CarloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Monte-CarloTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB5C3561298DA331008CE384 /* Monte_CarloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monte_CarloTests.swift; sourceTree = "<group>"; };
+		AB5C3567298DA331008CE384 /* Monte-CarloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Monte-CarloUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB5C356B298DA331008CE384 /* Monte_CarloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monte_CarloUITests.swift; sourceTree = "<group>"; };
+		AB5C356D298DA331008CE384 /* Monte_CarloUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monte_CarloUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB5C3549298DA330008CE384 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB5C355A298DA331008CE384 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB5C3564298DA331008CE384 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB5C3543298DA330008CE384 = {
+			isa = PBXGroup;
+			children = (
+				AB5C354E298DA330008CE384 /* Monte-Carlo */,
+				AB5C3560298DA331008CE384 /* Monte-CarloTests */,
+				AB5C356A298DA331008CE384 /* Monte-CarloUITests */,
+				AB5C354D298DA330008CE384 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB5C354D298DA330008CE384 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB5C354C298DA330008CE384 /* Monte-Carlo.app */,
+				AB5C355D298DA331008CE384 /* Monte-CarloTests.xctest */,
+				AB5C3567298DA331008CE384 /* Monte-CarloUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB5C354E298DA330008CE384 /* Monte-Carlo */ = {
+			isa = PBXGroup;
+			children = (
+				AB5C354F298DA330008CE384 /* Monte_CarloApp.swift */,
+				AB5C3551298DA330008CE384 /* ContentView.swift */,
+				AB5C3553298DA331008CE384 /* Assets.xcassets */,
+				AB5C3555298DA331008CE384 /* Monte_Carlo.entitlements */,
+				AB5C3556298DA331008CE384 /* Preview Content */,
+			);
+			path = "Monte-Carlo";
+			sourceTree = "<group>";
+		};
+		AB5C3556298DA331008CE384 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AB5C3557298DA331008CE384 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AB5C3560298DA331008CE384 /* Monte-CarloTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB5C3561298DA331008CE384 /* Monte_CarloTests.swift */,
+			);
+			path = "Monte-CarloTests";
+			sourceTree = "<group>";
+		};
+		AB5C356A298DA331008CE384 /* Monte-CarloUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AB5C356B298DA331008CE384 /* Monte_CarloUITests.swift */,
+				AB5C356D298DA331008CE384 /* Monte_CarloUITestsLaunchTests.swift */,
+			);
+			path = "Monte-CarloUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB5C354B298DA330008CE384 /* Monte-Carlo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB5C3571298DA331008CE384 /* Build configuration list for PBXNativeTarget "Monte-Carlo" */;
+			buildPhases = (
+				AB5C3548298DA330008CE384 /* Sources */,
+				AB5C3549298DA330008CE384 /* Frameworks */,
+				AB5C354A298DA330008CE384 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Monte-Carlo";
+			productName = "Monte-Carlo";
+			productReference = AB5C354C298DA330008CE384 /* Monte-Carlo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB5C355C298DA331008CE384 /* Monte-CarloTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB5C3574298DA331008CE384 /* Build configuration list for PBXNativeTarget "Monte-CarloTests" */;
+			buildPhases = (
+				AB5C3559298DA331008CE384 /* Sources */,
+				AB5C355A298DA331008CE384 /* Frameworks */,
+				AB5C355B298DA331008CE384 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB5C355F298DA331008CE384 /* PBXTargetDependency */,
+			);
+			name = "Monte-CarloTests";
+			productName = "Monte-CarloTests";
+			productReference = AB5C355D298DA331008CE384 /* Monte-CarloTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AB5C3566298DA331008CE384 /* Monte-CarloUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB5C3577298DA331008CE384 /* Build configuration list for PBXNativeTarget "Monte-CarloUITests" */;
+			buildPhases = (
+				AB5C3563298DA331008CE384 /* Sources */,
+				AB5C3564298DA331008CE384 /* Frameworks */,
+				AB5C3565298DA331008CE384 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB5C3569298DA331008CE384 /* PBXTargetDependency */,
+			);
+			name = "Monte-CarloUITests";
+			productName = "Monte-CarloUITests";
+			productReference = AB5C3567298DA331008CE384 /* Monte-CarloUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB5C3544298DA330008CE384 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					AB5C354B298DA330008CE384 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					AB5C355C298DA331008CE384 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = AB5C354B298DA330008CE384;
+					};
+					AB5C3566298DA331008CE384 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = AB5C354B298DA330008CE384;
+					};
+				};
+			};
+			buildConfigurationList = AB5C3547298DA330008CE384 /* Build configuration list for PBXProject "Monte-Carlo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB5C3543298DA330008CE384;
+			productRefGroup = AB5C354D298DA330008CE384 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB5C354B298DA330008CE384 /* Monte-Carlo */,
+				AB5C355C298DA331008CE384 /* Monte-CarloTests */,
+				AB5C3566298DA331008CE384 /* Monte-CarloUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB5C354A298DA330008CE384 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB5C3558298DA331008CE384 /* Preview Assets.xcassets in Resources */,
+				AB5C3554298DA331008CE384 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB5C355B298DA331008CE384 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB5C3565298DA331008CE384 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB5C3548298DA330008CE384 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB5C3552298DA330008CE384 /* ContentView.swift in Sources */,
+				AB5C3550298DA330008CE384 /* Monte_CarloApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB5C3559298DA331008CE384 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB5C3562298DA331008CE384 /* Monte_CarloTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB5C3563298DA331008CE384 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB5C356E298DA331008CE384 /* Monte_CarloUITestsLaunchTests.swift in Sources */,
+				AB5C356C298DA331008CE384 /* Monte_CarloUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB5C355F298DA331008CE384 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB5C354B298DA330008CE384 /* Monte-Carlo */;
+			targetProxy = AB5C355E298DA331008CE384 /* PBXContainerItemProxy */;
+		};
+		AB5C3569298DA331008CE384 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB5C354B298DA330008CE384 /* Monte-Carlo */;
+			targetProxy = AB5C3568298DA331008CE384 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AB5C356F298DA331008CE384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB5C3570298DA331008CE384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		AB5C3572298DA331008CE384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Monte-Carlo/Monte_Carlo.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Monte-Carlo/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.db.Monte-Carlo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB5C3573298DA331008CE384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Monte-Carlo/Monte_Carlo.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Monte-Carlo/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.db.Monte-Carlo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AB5C3575298DA331008CE384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.db.Monte-CarloTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Monte-Carlo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Monte-Carlo";
+			};
+			name = Debug;
+		};
+		AB5C3576298DA331008CE384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.db.Monte-CarloTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Monte-Carlo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Monte-Carlo";
+			};
+			name = Release;
+		};
+		AB5C3578298DA331008CE384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.db.Monte-CarloUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Monte-Carlo";
+			};
+			name = Debug;
+		};
+		AB5C3579298DA331008CE384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.db.Monte-CarloUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Monte-Carlo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB5C3547298DA330008CE384 /* Build configuration list for PBXProject "Monte-Carlo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB5C356F298DA331008CE384 /* Debug */,
+				AB5C3570298DA331008CE384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB5C3571298DA331008CE384 /* Build configuration list for PBXNativeTarget "Monte-Carlo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB5C3572298DA331008CE384 /* Debug */,
+				AB5C3573298DA331008CE384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB5C3574298DA331008CE384 /* Build configuration list for PBXNativeTarget "Monte-CarloTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB5C3575298DA331008CE384 /* Debug */,
+				AB5C3576298DA331008CE384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB5C3577298DA331008CE384 /* Build configuration list for PBXNativeTarget "Monte-CarloUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB5C3578298DA331008CE384 /* Debug */,
+				AB5C3579298DA331008CE384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB5C3544298DA330008CE384 /* Project object */;
+}
