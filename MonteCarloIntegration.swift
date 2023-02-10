@@ -6,23 +6,23 @@
 //
 
 import SwiftUI
-class MonteCarloIntegration: NSObject {
-    var variableN :Int = 0
-    var Nstring = ""
-    var insideData = [(xPoint: Double, yPoint: Double)]()
-    var outsideData = [(xPoint: Double, yPoint: Double)]()
+class MonteCarloIntegration: ObservableObject {
+   @Published var variableN :Int = 0
+   @Published var Nstring = ""
+   @Published var insideData = [(xPoint: Double, yPoint: Double)]()
+   @Published var outsideData = [(xPoint: Double, yPoint: Double)]()
     var randomx = 0.0
     var randomy = 0.0
     let xmin = 0.0
     let xmax = 1.0
     let ymin = 0.0
     let ymax = 1.0
-    var insideGuesses = 0
-    var outsideGuesses = 0
-    var totalGuesses = 0
-    var  exactintegral = ( exp(1.0) - 1.0 )/exp(1.0)
-    var integral = -2023.0
-    var logerror = 100.0
+    @Published var insideGuesses = 0
+    @Published var outsideGuesses = 0
+    @Published var totalGuesses = 0
+    @Published var  exactintegral = ( exp(1.0) - 1.0 )/exp(1.0)
+    @Published var integral = -2023.0
+    @Published var logerror = 100.0
     
     
     func monteCarloIntegration() {
@@ -48,5 +48,16 @@ class MonteCarloIntegration: NSObject {
         logerror = -log10(abs(integral - exactintegral)/exactintegral)
     }
 
+    
+    func clear(){
+        insideData = [(xPoint: Double, yPoint: Double)]()
+        outsideData = [(xPoint: Double, yPoint: Double)]()
+        insideGuesses = 0
+        outsideGuesses = 0
+        totalGuesses = 0
+        logerror = 0.0
+        integral = 0.0
+    
+    }
 
 }

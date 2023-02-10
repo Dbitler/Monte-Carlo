@@ -16,6 +16,7 @@ class CalculatePlotData: ObservableObject {
     var logerror = 0.0
     var values = (0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
     var Nstring = ""
+    @ObservedObject var mymontecarloinstance = MonteCarloIntegration()
 
     @MainActor func setThePlotParameters(color: String, xLabel: String, yLabel: String, title: String) {
         //set the Plot Parameters
@@ -74,7 +75,7 @@ class CalculatePlotData: ObservableObject {
         var values = [10.0, 20.0, 50.0, 100.0, 200.0, 500.0, 1000.0, 10000.0, 50000.0]
         for value in values {
             Nstring = String(value)
-            MonteCarloIntegration()
+            mymontecarloinstance.monteCarloIntegration()
             let x = log(value)
             
             let y = logerror

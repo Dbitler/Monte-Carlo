@@ -19,7 +19,9 @@ struct ContentView: View {
     
     //Plot instances variables
     @EnvironmentObject var plotData :PlotClass
+    //@State var plotData = [PlotDataStruct]()
     @ObservedObject private var calculator = CalculatePlotData()
+    @ObservedObject var mymontecarloinstance = MonteCarloIntegration()
     @State var isChecked:Bool = false
     @State var tempInput = ""
     @State var selector = 0
@@ -35,19 +37,19 @@ struct ContentView: View {
     //ContentView().environmentObject(PlotClass)
     
     //integration variables
-    @State var variableN :Int = 0
-    @State var Nstring = ""
-    @State var insideData = [(xPoint: Double, yPoint: Double)]()
-    @State var outsideData = [(xPoint: Double, yPoint: Double)]()
-    @State var randomx = 0.0
+    // var variableN :Int = 0
+    // var Nstring = ""
+    //var insideData = [(xPoint: Double, yPoint: Double)]()
+    //var outsideData = [(xPoint: Double, yPoint: Double)]()
+    var randomx = 0.0
     @State var randomy = 0.0
     let xmin = 0.0
     let xmax = 1.0
     let ymin = 0.0
     let ymax = 1.0
-    @State var insideGuesses = 0
-    @State var outsideGuesses = 0
-    @State var totalGuesses = 0
+//     var insideGuesses = 0
+//    @State var outsideGuesses = 0
+//    @State var totalGuesses = 0
     @State var  exactintegral = ( exp(1.0) - 1.0 )/exp(1.0)
     @State var integral = -2023.0
     @State var logerror = 100.0
@@ -57,7 +59,7 @@ struct ContentView: View {
         HStack{
             VStack {
                 Text("Enter the # of guesses:")
-                TextField("# of Guesses", text: $Nstring)
+                TextField("# of Guesses", text: $mymontecarloinstance.Nstring)
                 Button(action: self.monteCarloIntegration) {
                     Text("Calculate")
                 }
@@ -67,15 +69,7 @@ struct ContentView: View {
                 Button(action: clear) {
                     Text("Clear previous Integral")
                 }
-                Button("Graph exp(-x)", action: {
-                    Task.init{
-                        self.selector = 0
-                        await self.calculate()
-                    }
-                }
-                       
-                       
-                )
+
                 .padding()
                 
             }
@@ -83,17 +77,17 @@ struct ContentView: View {
             //DrawingField
             
             VStack{
-                drawingView(redLayer: $insideData, blueLayer: $outsideData)
+                drawingView(redLayer: $mymontecarloinstance.insideData, blueLayer: $mymontecarloinstance.outsideData)
                     .padding()
                     .aspectRatio(1, contentMode: .fit)
                 // Stop the window shrinking to zero.
                 Spacer()
-                Text("total number of inside guesses: \(insideGuesses)")
-                Text("total number of outside guesses: \(outsideGuesses)")
-                Text("total number of guesses: \(totalGuesses)")
+                Text("total number of inside guesses: \(mymontecarloinstance.insideGuesses)")
+                Text("total number of outside guesses: \(mymontecarloinstance.outsideGuesses)")
+                Text("total number of guesses: \(mymontecarloinstance.totalGuesses)")
                 Text("exact integral: \(exactintegral)")
-                Text("calculated integral: \(integral)")
-                Text("log error: \(logerror) ")
+                Text("calculated integral: \(mymontecarloinstance.integral)")
+                Text("log error: \(mymontecarloinstance.logerror) ")
             }
             
             // NEED TO CHANGE THIS SO THAT IT ACTUALLY GRAPHS THE ERROR W/ RESPECT TO N-VALUE - comment
@@ -134,71 +128,43 @@ struct ContentView: View {
         ///
         ///
         func monteCarloIntegration() {
-            /*
-            let mymontecarloinstance = MonteCarloIntegration()
-            mymontecarloinstance.Nstring = Nstring
             
-            self.insideGuesses = mymontecarloinstance.monteCarloIntegration(name:"insideGuesses")
-            let insideData = mymontecarloinstance.insideData
-            let outsideData = mymontecarloinstance.outsideData 
-            let outsideGuesses = mymontecarloinstance.outsideGuesses
-            let totalGuesses = mymontecarloinstance.totalGuesses
-            let integral = mymontecarloinstance.integral
-            let logerror = mymontecarloinstance.logerror
-            let exactintegral = mymontecarloinstance.exactintegral
-            
-            */
-            
-            
-            variableN = Int(Nstring)!
-            for i in 0..<variableN {
-                randomx = Double.random(in: xmin...xmax)
-                randomy = Double.random(in: ymin...ymax)
-                if randomy <= exp(-randomx) {
-                    if (totalGuesses < 20000) {  insideData.append((xPoint: randomx, yPoint: randomy))
-                    }
-                    insideGuesses = insideGuesses + 1
-                }
-                else {
-                    if (totalGuesses < 20000) { outsideData.append((xPoint: randomx, yPoint: randomy))
-                    }
-                    outsideGuesses = outsideGuesses + 1
-                }
-                totalGuesses = totalGuesses + 1
-            }
-            //PLACEHOLDER CODE, REPLACE WITH CALL TO BOUNDINGBOX PARAMETERS
-            let areaofBoundingBox = 1.0
-            integral = Double(insideGuesses)/Double(totalGuesses) * areaofBoundingBox
-            logerror = -log10(abs(integral - exactintegral)/exactintegral)
-            
+            mymontecarloinstance.monteCarloIntegration()
+           
         }
     
 
         
         func integralloop() {
-            var values = [10, 20, 50, 100, 200, 500, 1000, 10000, 50000]
+            var values = [10, 20, 50, 100, 200, 500, 1000, 10000, 50000, 100000]
+            
+            var logErrorArray :[Double] = []
+            
+            self.plotData.plotArray[0].plotData = []
+            
+            calculator.plotDataModel = self.plotData.plotArray[0]
+            
             for value in values {
-                Nstring = String(value)
-                monteCarloIntegration()
-                clear()
+                mymontecarloinstance.Nstring = String(value)
+                mymontecarloinstance.monteCarloIntegration()
+                logErrorArray.append(mymontecarloinstance.logerror)
+               
+                calculator.appendDataToPlot(plotData: [(x: Double(value), y: mymontecarloinstance.logerror)])
+                //calculator.setupPlotDataModel(selector: 0)
+                mymontecarloinstance.clear()
 
             }
         }
         
         func clear(){
-            insideData = [(xPoint: Double, yPoint: Double)]()
-            outsideData = [(xPoint: Double, yPoint: Double)]()
-            insideGuesses = 0
-            outsideGuesses = 0
-            totalGuesses = 0
-            logerror = 0.0
+            mymontecarloinstance.clear()
         }
         
         func calculate() async {
             
             let myplottinginstance = CalculatePlotData()
             myplottinginstance.logerror = logerror
-            myplottinginstance.Nstring = Nstring
+            // myplottinginstance.Nstring = Nstring
             
             //pass the plotDataModel to the Calculator
             // calculator.plotDataModel = self.plotData.plotArray[0]
